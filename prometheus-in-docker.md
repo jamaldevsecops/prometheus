@@ -11,13 +11,13 @@ services:
     volumes:
       - prometheus_config:/etc/prometheus
     networks:
-      - grafana_network
+      - prometheus_network
     restart: unless-stopped
 
 volumes:
   prometheus_config:
 
 networks:
-  grafana_network:
+  prometheus_network:
     driver: bridge
 ```
